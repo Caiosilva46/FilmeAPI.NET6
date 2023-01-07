@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FilmesAPI</name>
+    </assembly>
+    <members>
+        <member name="M:FilmesAPI.Controllers.FilmeController.AddFilme(FilmesAPI.Data.Dtos.CreateFilmeDto)">
+            <summary>
+            Adicina um filme ao banco de dados
+            </summary>
+            <param name="filmeDto">Objetos com os campos necessários para criação de uma filme</param>
+            <returns>IActionResult</returns>
+            <response code="201">Caso inserção seja feita com sucesso</response>
+        </member>
+        <member name="M:FilmesAPI.Controllers.FilmeController.GetAllFilmes(System.Int32,System.Int32)">
+            <summary>
+            Recupera uma lista de filmes
+            </summary>
+            <param name=""></param>
+            <returns>IActionResult</returns>
+            <response code="200">Caso seja recuperado com sucesso</response>
+        </member>
+        <member name="M:FilmesAPI.Controllers.FilmeController.GetFilmeForId(System.Int32)">
+            <summary>
+            Recupera filmes por ID
+            </summary>
+            <param name="id"> Id necessáio para pesquisa</param>
+            <returns>IActionResult</returns>
+            <response code="200">Caso tenha um item com o Id passado no parametro</response>
+            <response code="404">Caso seja passado um id que não exista</response>
+        </member>
+        <member name="M:FilmesAPI.Controllers.FilmeController.PutFilmes(System.Int32,FilmesAPI.Data.Dtos.UpdateFilmeDto)">
+            <summary>
+            Atualiza o cadastro do filme
+            </summary>
+            <param name="id"> Id necessáio para pesquisa</param>
+            <returns>IActionResult</returns>
+            <response code="204">Caso a atualização seja feita com sucesso</response>
+            <response code="404">Caso seja passado um id que não exista</response>
+        </member>
+        <member name="M:FilmesAPI.Controllers.FilmeController.PatchFilmes(System.Int32,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{FilmesAPI.Data.Dtos.UpdateFilmeDto})">
+            <summary>
+            Atualiza parcialmente o cadastro de um filme
+            </summary>
+            <param name="id"> Id necessáio para pesquisa</param>
+            <returns>IActionResult</returns>
+            <response code="204">Caso a atualização parcial seja feita com sucesso</response>
+            <response code="404">Caso seja passado um id que não exista</response>
+        </member>
+        <member name="M:FilmesAPI.Controllers.FilmeController.DeleteFilme(System.Int32)">
+            <summary>
+            Deleta filme cadastrado
+            </summary>
+            <param name="id"> Id necessáio para pesquisa</param>
+            <returns>IActionResult</returns>
+            <response code="204">Caso o item seja deletado com sucesso</response>
+            <response code="404">Caso seja passado um id que não exista</response>
+        </member>
+    </members>
+</doc>
